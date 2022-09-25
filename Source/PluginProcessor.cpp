@@ -7,7 +7,6 @@
 */
 
 #include "PluginProcessor.h"
-#include "PluginEditor.h"
 
 //==============================================================================
 CymasphereJuceAudioProcessor::CymasphereJuceAudioProcessor()
@@ -166,7 +165,7 @@ bool CymasphereJuceAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* CymasphereJuceAudioProcessor::createEditor()
 {
-    return new CymasphereJuceAudioProcessorEditor (*this);
+    return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================
